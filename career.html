@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore technology, design, business, healthcare, and engineering careers with PathFinder.">
+  <title>Explore Careers | PathFinder</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1769E0",
+            navy: "#12315B",
+            pale: "#F1F7FF"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-slate-800">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <a href="index.html" class="text-2xl font-bold text-navy">
+        Path<span class="text-primary">Finder</span>
+      </a>
+
+      <button
+        id="menuBtn"
+        class="md:hidden text-primary text-2xl"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        ☰
+      </button>
+
+      <div
+        id="navLinks"
+        class="hidden absolute top-full left-0 w-full bg-white p-6 flex-col gap-5 shadow-md md:shadow-none md:p-0 md:static md:w-auto md:flex md:flex-row md:items-center md:gap-6">
+
+        <a href="index.html" class="hover:text-primary">Home</a>
+
+        <a href="career.html"
+          aria-current="page"
+          class="text-primary font-semibold">
+          Careers
+        </a>
+
+        <a href="paths.html" class="hover:text-primary">
+          Learning Paths
+        </a>
+
+        <a href="resources.html" class="hover:text-primary">
+          Resources
+        </a>
+
+        <a href="contact.html"
+          class="bg-primary text-white px-5 py-3 rounded-lg text-center hover:bg-blue-700">
+          Contact Us
+        </a>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="page-hero">
+      <div class="max-w-7xl mx-auto px-6 py-16 md:py-20 grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <p class="section-label mb-4">Discover your future</p>
+
+          <h1 class="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
+            Explore Careers That Match Your Passion
+          </h1>
+
+          <p class="text-slate-600 text-lg leading-8 mb-8">
+            Discover different professions, understand the skills they
+            require, and find a career direction that suits your interests
+            and ambitions.
+          </p>
+
+          <a href="#career-list"
+            class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+            Browse Careers ↓
+          </a>
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+          alt="Professionals working together in a modern office"
+          class="hero-image">
+      </div>
+    </section>
+
+    <!-- SEARCH AND FILTER -->
+    <section id="career-list" class="max-w-7xl mx-auto px-6 py-16">
+
+      <div class="text-center mb-10">
+        <p class="section-label mb-3">Find your direction</p>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">
+          Explore Career Opportunities
+        </h2>
+
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Search by career name or select a field to discover opportunities
+          and the skills you can start developing.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4 mb-10">
+
+        <input
+          id="careerSearch"
+          type="search"
+          placeholder="Search careers, e.g. Web Developer..."
+          aria-label="Search careers"
+          class="flex-1 border border-slate-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500">
+
+        <select
+          id="categoryFilter"
+          aria-label="Filter careers by category"
+          class="border border-slate-300 rounded-lg px-4 py-3 bg-white">
+
+          <option value="all">All Categories</option>
+          <option value="technology">Technology</option>
+          <option value="design">Design</option>
+          <option value="business">Business</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="engineering">Engineering</option>
+
+        </select>
+
+      </div>
+
+      <!-- CAREER CARDS -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Web Developer -->
+        <article data-career data-category="technology"
+          class="career-card border border-slate-200 rounded-xl overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85"
+            alt="Laptop on a web developer's workspace"
+            class="w-full h-52 object-cover"
+            loading="lazy">
+
+          <div class="p-6">
+            <span class="text-primary text-sm font-bold">TECHNOLOGY</span>
+
+            <h3 class="text-xl font-bold text-navy mt-2 mb-3">
+              Web Developer
+            </h3>
+
+            <p class="text-slate-600 mb-4">
+              Build websites and web applications using modern programming
+              languages and development tools.
+            </p>
+
+            <p class="text-sm text-slate-500 mb-5">
+              <strong>Skills:</strong> HTML, CSS, JavaScript
+            </p>
+
+            <a href="paths.html"
+              class="text-primary font-semibold hover:underline">
+              View Learning Path →
+            </a>
+          </div>
+        </article>
+
+        <!-- UI/UX Designer -->
+        <article data-career data-category="design"
+          class="career-card border border-slate-200 rounded-xl overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=85"
+            alt="Creative graphic design workspace"
+            class="w-full h-52 object-cover"
+            loading="lazy">
+
+          <div class="p-6">
+            <span class="text-primary text-sm font-bold">DESIGN</span>
+
+            <h3 class="text-xl font-bold text-navy mt-2 mb-3">
+              UI/UX Designer
+            </h3>
+
+            <p class="text-slate-600 mb-4">
+              Design attractive, accessible, and user-friendly websites
+              and mobile applications.
+            </p>
+
+            <p class="text-sm text-slate-500 mb-5">
+              <strong>Skills:</strong> Wireframing, prototyping, research
+            </p>
+
+            <a href="paths.html"
+              class="text-primary font-semibold hover:underline">
+              View Learning Path →
+            </a>
+          </div>
+        </article>
+
+        <!-- Data Analyst -->
+        <article data-career data-category="business"
+          class="career-card border border-slate-200 rounded-xl overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=85"
+            alt="Business analytics displayed on a laptop"
+            class="w-full h-52 object-cover"
+            loading="lazy">
+
+          <div class="p-6">
+            <span class="text-primary text-sm font-bold">BUSINESS</span>
+
+            <h3 class="text-xl font-bold text-navy mt-2 mb-3">
+              Data Analyst
+            </h3>
+
+            <p class="text-slate-600 mb-4">
+              Analyze information, identify trends, and help organizations
+              make informed decisions.
+            </p>
+
+            <p class="text-sm text-slate-500 mb-5">
+              <strong>Skills:</strong> Excel, SQL, data visualization
+            </p>
+
+            <a href="paths.html"
+              class="text-primary font-semibold hover:underline">
+              View Learning Path →
+            </a>
+          </div>
+        </article>
+
+        <!-- Cybersecurity -->
+        <article data-career data-category="technology"
+          class="career-card border border-slate-200 rounded-xl overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85"
+            alt="Computer circuit board and technology components"
+            class="w-full h-52 object-cover"
+            loading="lazy">
+
+          <div class="p-6">
+            <span class="text-primary text-sm font-bold">TECHNOLOGY</span>
+
+            <h3 class="text-xl font-bold text-navy mt-2 mb-3">
+              Cybersecurity Analyst
+            </h3>
+
+            <p class="text-slate-600 mb-4">
+              Help organizations protect their networks, systems,
+              and information from security threats.
+            </p>
+
+            <p class="text-sm text-slate-500 mb-5">
+              <strong>Skills:</strong> Networking, security fundamentals
+            </p>
+
+            <a href="paths.html"
+              class="text-primary font-semibold hover:underline">
+              View Learning Path →
+            </a>
+          </div>
+        </article>
+
+        <!-- Healthcare -->
+        <article data-career data-category="healthcare"
+          class="career-card border border-slate-200 rounded-xl overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=85"
+            alt="Healthcare professionals working together"
+            class="w-full h-52 object-cover"
+            loading="lazy">
+
+          <div class="p-6">
+            <span class="text-primary text-sm font-bold">HEALTHCARE</span>
+
+            <h3 class="text-xl font-bold text-navy mt-2 mb-3">
+              Healthcare Professional
+            </h3>
+
+            <p class="text-slate-600 mb-4">
+              Contribute to patient care through clinical, nursing,
+              laboratory, or allied health roles.
+            </p>
+
+            <p class="text-sm text-slate-500 mb-5">
+              <strong>Skills:</strong> Communication, relevant clinical training
+            </p>
+
+            <a href="resources.html"
+              class="text-primary font-semibold hover:underline">
+              Explore Resources →
+            </a>
+          </div>
+        </article>
+
+        <!-- Engineer -->
+        <article data-career data-category="engineering"
+          class="career-card border border-slate-200 rounded-xl overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=85"
+            alt="Engineer working with technical equipment"
+            class="w-full h-52 object-cover"
+            loading="lazy">
+
+          <div class="p-6">
+            <span class="text-primary text-sm font-bold">ENGINEERING</span>
+
+            <h3 class="text-xl font-bold text-navy mt-2 mb-3">
+              Engineer
+            </h3>
+
+            <p class="text-slate-600 mb-4">
+              Apply mathematics and science to design, build, and improve
+              systems, structures, or products.
+            </p>
+
+            <p class="text-sm text-slate-500 mb-5">
+              <strong>Skills:</strong> Mathematics, design, problem-solving
+            </p>
+
+            <a href="resources.html"
+              class="text-primary font-semibold hover:underline">
+              Explore Resources →
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- NO RESULTS MESSAGE -->
+      <p id="noCareers" hidden
+        class="text-center text-slate-500 py-10">
+        No careers found. Try another search or category.
+      </p>
+
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="bg-pale py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-5">
+          Ready to take the next step?
+        </h2>
+
+        <p class="text-slate-600 text-lg mb-8">
+          Choose a learning path, build practical skills, and start working
+          toward your career goals.
+        </p>
+
+        <a href="paths.html"
+          class="inline-block bg-primary text-white px-7 py-3 rounded-lg hover:bg-blue-700 transition">
+          Explore Learning Paths →
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-8">
+
+      <div>
+        <a href="index.html" class="text-2xl font-bold">
+          PathFinder
+        </a>
+        <p class="text-blue-100 mt-3">
+          Helping you take the next step in your career.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-5 text-blue-100">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="career.html" class="hover:text-white">Careers</a>
+        <a href="paths.html" class="hover:text-white">Learning Paths</a>
+        <a href="resources.html" class="hover:text-white">Resources</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="border-t border-blue-900 text-center px-6 py-5 text-sm text-blue-200">
+      © <span id="year"></span> PathFinder. All rights reserved.
+    </div>
+
+  </footer>
+
+  <!-- Shared JavaScript -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

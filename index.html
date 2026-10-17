@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover careers, develop skills, and plan your future with PathFinder.">
+  <title>Home | PathFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1769E0",
+            navy: "#12315B",
+            pale: "#F1F7FF"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="bg-white border-b sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-navy">Path<span class="text-primary">Finder</span></a>
+    <button id="menuBtn" class="md:hidden text-primary text-2xl" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <div id="navLinks" class="hidden absolute top-full left-0 w-full bg-white p-6 flex-col gap-5 shadow-md md:shadow-none md:p-0 md:static md:w-auto md:flex md:flex-row md:items-center md:gap-6">
+      <a href="index.html" class="text-primary font-semibold">Home</a>
+      <a href="career.html" class="hover:text-primary">Careers</a>
+      <a href="paths.html" class="hover:text-primary">Learning Paths</a>
+      <a href="resources.html" class="hover:text-primary">Resources</a>
+      <a href="contact.html" class="bg-primary text-white px-5 py-3 rounded-lg text-center">Contact Us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="section-label mb-4">Your future, your journey</p>
+        <h1 class="text-4xl md:text-6xl font-bold text-navy leading-tight mb-6">Find the career path that's right for you.</h1>
+        <p class="text-slate-600 text-lg leading-8 mb-8">Explore career options, develop valuable skills, and turn your ambitions into a practical plan for your future.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="career.html" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Careers →</a>
+          <a href="paths.html" class="border border-blue-200 text-navy px-6 py-3 rounded-lg hover:bg-white">View Learning Paths</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Professionals collaborating in a modern office" class="hero-image">
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <p class="section-label mb-3">Explore your options</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Discover careers that inspire you</h2>
+      <p class="text-slate-600">Explore different fields and find opportunities that match your interests and strengths.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="career-card p-7 border rounded-xl">
+        <div class="text-3xl mb-4">💻</div>
+        <h3 class="text-xl font-bold text-navy mb-3">Technology</h3>
+        <p class="text-slate-600 mb-5">Discover software development, cybersecurity, data, and IT careers.</p>
+        <a href="career.html?category=technology" class="text-primary font-semibold">Explore careers →</a>
+      </article>
+      <article class="career-card p-7 border rounded-xl">
+        <div class="text-3xl mb-4">🎨</div>
+        <h3 class="text-xl font-bold text-navy mb-3">Creative Design</h3>
+        <p class="text-slate-600 mb-5">Explore graphic design, UI/UX, and digital content creation.</p>
+        <a href="career.html?category=design" class="text-primary font-semibold">Explore careers →</a>
+      </article>
+      <article class="career-card p-7 border rounded-xl">
+        <div class="text-3xl mb-4">📊</div>
+        <h3 class="text-xl font-bold text-navy mb-3">Business</h3>
+        <p class="text-slate-600 mb-5">Learn about finance, marketing, management, and entrepreneurship.</p>
+        <a href="career.html?category=business" class="text-primary font-semibold">Explore careers →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="bg-pale py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=85" alt="Students learning and collaborating" class="hero-image">
+      <div>
+        <p class="section-label mb-3">A plan that works for you</p>
+        <h2 class="text-3xl font-bold text-navy mb-5">Small steps lead to big opportunities.</h2>
+        <p class="text-slate-600 leading-7 mb-6">Understand your options, choose the skills you need, and build practical experience one step at a time.</p>
+        <ul class="space-y-3 text-slate-700 mb-7">
+          <li>✓ Explore career choices</li>
+          <li>✓ Follow structured learning paths</li>
+          <li>✓ Prepare for real-world opportunities</li>
+        </ul>
+        <a href="paths.html" class="bg-primary text-white px-6 py-3 rounded-lg inline-block">Start your journey →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-navy text-white">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6">
+    <div>
+      <a href="index.html" class="text-2xl font-bold">PathFinder</a>
+      <p class="text-blue-100 mt-3">Helping you take the next step in your career.</p>
+    </div>
+    <div class="flex flex-wrap gap-5 text-blue-100">
+      <a href="career.html">Careers</a><a href="paths.html">Learning Paths</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="border-t border-blue-900 text-center px-6 py-5 text-sm text-blue-200">© <span id="year"></span> PathFinder. All rights reserved.</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

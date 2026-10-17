@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Contact | PathFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: {
+      primary: "#1769E0", navy: "#12315B", pale: "#F1F7FF"
+    }}}};
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="bg-white border-b sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-navy">Path<span class="text-primary">Finder</span></a>
+    <button id="menuBtn" class="md:hidden text-primary text-2xl" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <div id="navLinks" class="hidden absolute top-full left-0 w-full bg-white p-6 flex-col gap-5 shadow-md md:shadow-none md:p-0 md:static md:w-auto md:flex md:flex-row md:items-center md:gap-6">
+      <a href="index.html" class="hover:text-primary">Home</a><a href="career.html" class="hover:text-primary">Careers</a><a href="paths.html" class="hover:text-primary">Learning Paths</a><a href="resources.html" class="hover:text-primary">Resources</a><a href="contact.html" class="bg-primary text-white px-5 py-3 rounded-lg text-center">Contact Us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="section-label mb-4">About PathFinder</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-navy mb-5">Your journey matters.</h1>
+      <p class="text-slate-600 text-lg">We make career exploration easier by bringing career information, learning roadmaps, and practical resources together in one place.</p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Professionals collaborating and sharing ideas" class="hero-image">
+    <div>
+      <p class="section-label mb-3">Our mission</p>
+      <h2 class="text-3xl font-bold text-navy mb-5">Make career planning simpler for everyone.</h2>
+      <p class="text-slate-600 leading-7 mb-5">Choosing a career can feel overwhelming. PathFinder helps students, graduates, and career changers explore possibilities and understand the skills they can develop.</p>
+      <p class="text-slate-600 leading-7 mb-6">Our goal is to make the next step feel clearer, whether you're discovering a new field, learning a skill, or preparing to apply for a job.</p>
+      <a href="career.html" class="bg-primary text-white px-6 py-3 rounded-lg inline-block">Explore Careers →</a>
+    </div>
+  </section>
+
+  <section class="bg-pale py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="section-label mb-3">Get in touch</p>
+        <h2 class="text-3xl font-bold text-navy">We'd love to hear from you.</h2>
+        <p class="text-slate-600 mt-3">Have a question or suggestion? Send us a message.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border p-6 md:p-10">
+        <form id="contactForm" class="space-y-5">
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block font-semibold text-navy mb-2">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="100" class="w-full border rounded-lg px-4 py-3" placeholder="Enter your name">
+            </div>
+            <div>
+              <label for="email" class="block font-semibold text-navy mb-2">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="254" class="w-full border rounded-lg px-4 py-3" placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block font-semibold text-navy mb-2">Subject</label>
+            <select id="subject" name="subject" required class="w-full border rounded-lg px-4 py-3 bg-white">
+              <option value="">Choose a subject</option>
+              <option value="career-guidance">Career guidance</option>
+              <option value="learning-paths">Learning paths</option>
+              <option value="website-feedback">Website feedback</option>
+              <option value="other">Other inquiry</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block font-semibold text-navy mb-2">Your message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" maxlength="3000" class="w-full border rounded-lg px-4 py-3" placeholder="How can we help?"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700">Submit Message</button>
+          <p id="formMessage" role="status" aria-live="polite" hidden class="bg-blue-50 text-navy p-4 rounded-lg"></p>
+          <p class="text-sm text-slate-500">Demo form: messages are not sent or stored. A backend or form service is needed to receive submissions.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-navy text-white">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6">
+    <div><a href="index.html" class="text-2xl font-bold">PathFinder</a><p class="text-blue-100 mt-3">Helping you take the next step in your career.</p></div>
+    <div class="flex flex-wrap gap-5 text-blue-100"><a href="career.html">Careers</a><a href="paths.html">Learning Paths</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="border-t border-blue-900 text-center px-6 py-5 text-sm text-blue-200">© <span id="year"></span> PathFinder. All rights reserved.</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

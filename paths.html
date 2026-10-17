@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Paths | PathFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: {
+      primary: "#1769E0", navy: "#12315B", pale: "#F1F7FF"
+    }}}};
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="bg-white border-b sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-navy">Path<span class="text-primary">Finder</span></a>
+    <button id="menuBtn" class="md:hidden text-primary text-2xl" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <div id="navLinks" class="hidden absolute top-full left-0 w-full bg-white p-6 flex-col gap-5 shadow-md md:shadow-none md:p-0 md:static md:w-auto md:flex md:flex-row md:items-center md:gap-6">
+      <a href="index.html" class="hover:text-primary">Home</a><a href="career.html" class="hover:text-primary">Careers</a><a href="paths.html" class="text-primary font-semibold">Learning Paths</a><a href="resources.html" class="hover:text-primary">Resources</a><a href="contact.html" class="bg-primary text-white px-5 py-3 rounded-lg text-center">Contact Us</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="section-label mb-4">Learn at your own pace</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-navy mb-5">Build Skills. Reach Your Goals.</h1>
+      <p class="text-slate-600 text-lg">Follow practical roadmaps that help you move from beginner knowledge to real-world projects.</p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid lg:grid-cols-2 gap-8">
+
+      <article data-path class="path-card border rounded-2xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="Laptop and web development workspace" class="w-full h-56 object-cover">
+        <div class="p-7">
+          <span class="text-primary text-sm font-bold">TECHNOLOGY · BEGINNER</span>
+          <h2 class="text-2xl font-bold text-navy mt-3 mb-3">Web Development</h2>
+          <p class="text-slate-600 mb-6">Learn how to build responsive websites and create a portfolio of practical projects.</p>
+
+          <h3 class="font-bold text-navy mb-4">Your roadmap</h3>
+          <div class="space-y-4 mb-6">
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 1: HTML</strong><br><span class="text-slate-500 text-sm">Learn semantic page structure and forms.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 2: CSS and Tailwind</strong><br><span class="text-slate-500 text-sm">Build attractive, responsive layouts.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 3: JavaScript</strong><br><span class="text-slate-500 text-sm">Add interactions and dynamic behavior.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 4: Build a portfolio</strong><br><span class="text-slate-500 text-sm">Create and publish three practical projects.</span></span></label>
+          </div>
+
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"><div data-progress class="h-full bg-primary rounded-full" style="width:0%"></div></div>
+          <p data-progress-text class="text-sm text-slate-500 mt-2">0 of 4 steps completed (0%)</p>
+        </div>
+      </article>
+
+      <article data-path class="path-card border rounded-2xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85" alt="Data analytics dashboard on a computer" class="w-full h-56 object-cover">
+        <div class="p-7">
+          <span class="text-primary text-sm font-bold">DATA · BEGINNER</span>
+          <h2 class="text-2xl font-bold text-navy mt-3 mb-3">Data Analytics</h2>
+          <p class="text-slate-600 mb-6">Learn to organize data, uncover insights, and communicate findings clearly.</p>
+
+          <h3 class="font-bold text-navy mb-4">Your roadmap</h3>
+          <div class="space-y-4 mb-6">
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 1: Spreadsheets</strong><br><span class="text-slate-500 text-sm">Practice formulas, sorting, and cleaning data.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 2: Data visualization</strong><br><span class="text-slate-500 text-sm">Present findings using clear charts.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 3: SQL fundamentals</strong><br><span class="text-slate-500 text-sm">Query and explore structured datasets.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 4: Create a project</strong><br><span class="text-slate-500 text-sm">Analyze a dataset and present your conclusions.</span></span></label>
+          </div>
+
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"><div data-progress class="h-full bg-primary rounded-full" style="width:0%"></div></div>
+          <p data-progress-text class="text-sm text-slate-500 mt-2">0 of 4 steps completed (0%)</p>
+        </div>
+      </article>
+
+      <article data-path class="path-card border rounded-2xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=85" alt="Digital design and creative work" class="w-full h-56 object-cover">
+        <div class="p-7">
+          <span class="text-primary text-sm font-bold">DESIGN · BEGINNER</span>
+          <h2 class="text-2xl font-bold text-navy mt-3 mb-3">UI/UX Design</h2>
+          <p class="text-slate-600 mb-6">Learn to research user needs, design interfaces, and test digital experiences.</p>
+
+          <h3 class="font-bold text-navy mb-4">Your roadmap</h3>
+          <div class="space-y-4 mb-6">
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 1: Design principles</strong><br><span class="text-slate-500 text-sm">Learn layout, color, typography, and hierarchy.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 2: User research</strong><br><span class="text-slate-500 text-sm">Understand users and their problems.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 3: Wireframes</strong><br><span class="text-slate-500 text-sm">Plan interfaces and create prototypes.</span></span></label>
+            <label class="flex items-start gap-3"><input data-path-check type="checkbox" class="mt-1 accent-blue-600"><span><strong>Step 4: Case study</strong><br><span class="text-slate-500 text-sm">Document a design problem and your solution.</span></span></label>
+          </div>
+
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"><div data-progress class="h-full bg-primary rounded-full" style="width:0%"></div></div>
+          <p data-progress-text class="text-sm text-slate-500 mt-2">0 of 4 steps completed (0%)</p>
+        </div>
+      </article>
+
+    </div>
+    <p class="text-sm text-slate-500 mt-8">These roadmaps are starting points. Course requirements and the time needed to develop each skill vary.</p>
+  </section>
+</main>
+
+<footer class="bg-navy text-white">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6"><div><a href="index.html" class="text-2xl font-bold">PathFinder</a><p class="text-blue-100 mt-3">Helping you take the next step in your career.</p></div><div class="flex flex-wrap gap-5 text-blue-100"><a href="career.html">Careers</a><a href="paths.html">Learning Paths</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a></div></div>
+  <div class="border-t border-blue-900 text-center px-6 py-5 text-sm text-blue-200">© <span id="year"></span> PathFinder. All rights reserved.</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
